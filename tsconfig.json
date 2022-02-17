@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es2018",
+    "module": "commonjs",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "outDir": "./build",
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "paths": {
+      "types/*": ["src/types/*"],
+      "helpers/*": ["src/helpers/*"],
+      "utils/*": ["src/utils/*"],
+      "constants/*": ["src/constants/*"],
+      "models/*": ["src/database/models/*"],
+      "resources/*": ["src/resources/*"],
+      "controllers/*": ["src/controllers/*"],
+      "routes": ["src/routes"],
+      "routes/*": ["src/routes/*"],
+      "middlewares/*": ["src/middlewares/*"],
+      "tests/*": ["src/tests/*"],
+      "testUtils/*": ["src/testUtils/*"]
+    }
+  },
+  "include": ["./src/**/*", "tests"],
+  "exclude": ["node_modules", "coverage", "docs"]
+}
