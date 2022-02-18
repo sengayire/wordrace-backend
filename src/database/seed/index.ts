@@ -18,7 +18,7 @@ const main = async () => {
     await mongoose.connection.dropDatabase();
     await mongoose.createConnection(config.database, { useNewUrlParser: true });
     await seeder.import(collections);
-    
+
     console.log('Seed complete!');
     process.exit(0);
   } catch (err) {

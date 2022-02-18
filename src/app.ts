@@ -7,7 +7,7 @@ import cors from 'cors';
 import dbConfigs from 'src/database/model';
 
 import { HTTP_NOT_FOUND, HTTP_SERVER_ERROR } from './constants/httpStatusCode';
-import Words from './database/model/getWords';
+import routes from '../src/routes';
 
 dotenv.config();
 
@@ -21,25 +21,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (_, res) => {
-  var words = new Words({
-    words: [
-      'upsweeps',
-      'greiges',
-      'marmoset',
-      'overbooks',
-      'sagaman',
-      'blithesomely',
-      'dittanies',
-      'secants',
-      'caffeines',
-      'fatlesss',
-    ],
-  });
-  words.save();
+app.use('/api/v1', routes);
 
-  res.status(200).json({ message: 'welcome to word race' });
-});
 
 
 app.use((_: Request, __: Response, next) => {
