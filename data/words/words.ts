@@ -1,14 +1,12 @@
-export = {
-  words: [
-    'upsweeps',
-    'greiges',
-    'marmoset',
-    'overbooks',
-    'sagaman',
-    'blithesomely',
-    'dittanies',
-    'secants',
-    'caffeines',
-    'fatless',
-  ],
-};
+export = [
+  { word: 'upsweeps' },
+  { word: 'greiges' },
+  { word: 'marmoset' },
+  { word: 'overbooks' },
+  { word: 'sagaman' },
+  { word: 'blithesomely' },
+  { word: 'dittanies' },
+  { word: 'secants' },
+  { word: 'caffeines' },
+  { word: 'fatless' },
+];
