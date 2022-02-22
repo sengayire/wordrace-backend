@@ -19,6 +19,6 @@ const recordSchema: Schema = new Schema({
   },
 });
 
-const Records: Model<IRecords> = model('Records', recordSchema);
+const Records: Model<IRecords, any> = model('Records', recordSchema);
 
 export default Records;
