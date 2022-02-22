@@ -6,7 +6,6 @@ import Words from 'src/database/model/words';
 
 export const getWords = requestWrapper(async (req: Request, res: Response) => {
   const words = await Words.find();
-  console.log('words', words);
   return jsonResponse({
     res,
     status: HTTP_OK,
